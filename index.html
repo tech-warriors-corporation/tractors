@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Tratores - Tech Warriors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Veja imagens de tratores.">
+        <link rel="icon" href="./icon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --primary: #07f6bf;
+                --white: #fefefe;
+                --black: #0e0e0e;
+                --black-56: rgb(14, 14, 14, .56);
+            }
+
+            *{
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                box-sizing: border-box;
+            }
+
+            html{
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                color: var(--black);
+                background-color: var(--white);
+                height: 100%;
+            }
+
+            body{
+                display: flex;
+                flex-direction: column;
+                height: inherit;
+            }
+
+            .header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .header .header__title{
+                color: var(--primary);
+                text-shadow: 2px 2px 4px var(--black-56);
+                font-size: 4rem;
+                font-weight: 700;
+            }
+
+            .header .header__text{
+                margin-top: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .registration{
+                color: var(--black);
+                text-shadow: none;
+                font-size: 2rem;
+                vertical-align: top;
+            }
+
+            .main{
+                flex-grow: 1;
+                padding: 0 1rem 2rem;
+                margin: 0 auto;
+                max-width: 1000px;
+                width: 100%;
+            }
+
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                grid-gap: 1rem;
+                list-style: none;
+            }
+
+            .grid .grid__item{
+                width: 100%;
+            }
+
+            .grid .grid__image{
+                width: 100%;
+                border-radius: .5rem;
+                border: 2px solid var(--primary);
+                height: 250px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .grid .grid__text{
+                font-weight: 500;
+                font-size: 1.5rem;
+                margin-top: .25rem;
+            }
+
+            .footer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--white);
+                background-color: var(--black);
+                padding: 1rem;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">HarvTech<span class="registration">&reg;</span></h1>
+            <p class="header__text">Os grandes tratores do mercado:</p>
+        </header>
+        <main class="main">
+            <ul class="grid">
+                <li class="grid__item">
+                    <img class="grid__image" src="https://tech-warriors-tractors.s3.br-sao.cloud-object-storage.appdomain.cloud/john-deere.webp" alt="Trator de John Deere">
+                    <p class="grid__text">John Deere</p>
+                </li>
+                <li class="grid__item">
+                    <img class="grid__image" src="https://tech-warriors-tractors.s3.br-sao.cloud-object-storage.appdomain.cloud/massey-ferguson.jpg" alt="Trator de Massey Ferguson">
+                    <p class="grid__text">Massey Ferguson</p>
+                </li>
+                <li class="grid__item">
+                    <img class="grid__image" src="https://tech-warriors-tractors.s3.br-sao.cloud-object-storage.appdomain.cloud/new-holland.jpg" alt="Trator de New Holland">
+                    <p class="grid__text">New Holland</p>
+                </li>
+                <li class="grid__item">
+                    <img class="grid__image" src="https://tech-warriors-tractors.s3.br-sao.cloud-object-storage.appdomain.cloud/valtra.jpg" alt="Trator de Valtra">
+                    <p class="grid__text">Valtra</p>
+                </li>
+            </ul>
+        </main>
+        <footer class="footer">&copy; Feito por Tech Warriors.</footer>
+    </body>
+</html>
